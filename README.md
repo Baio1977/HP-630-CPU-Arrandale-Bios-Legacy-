@@ -1,1 +1,1 @@
-# HP-630-CPU-Arrandale-Bios-Legacy-
+# HP630-CPU-Arrandale-Bios-Legacy-
