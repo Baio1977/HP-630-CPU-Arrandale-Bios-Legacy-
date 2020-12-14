@@ -17,6 +17,8 @@
 | SmBios           | MacbookPro 6,1                     |
 | BootLoader       | OpenCore 0.6.4                     |
 
+## Device
+
 ![infoOS](./Screen/3.png)
 ![infoPCI](./Screen/4.png) 
 
