@@ -22,7 +22,7 @@
 ![infoOS](./Screen/3.png)
 ![infoPCI](./Screen/4.png) 
 
-### What works and What doesn't or WIP:
+### What works:
 
 - [x] Intel HD iGPU
 - [x] ALC270 Internal Speakers
