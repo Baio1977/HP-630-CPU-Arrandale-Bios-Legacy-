@@ -1,5 +1,8 @@
 # HP630-CPU-Arrandale-Bios-Legacy-
-### Computer Spec:
+
+![HP630](./Screen/1.jpg)
+
+![infobigsur](./Screen/2.jpg)### Computer Spec:
 
 | Component        | Brank                              |
 | ---------------- | ---------------------------------- |
