@@ -17,8 +17,8 @@
 | SmBios           | MacbookPro 6,1                     |
 | BootLoader       | OpenCore 0.6.4                     |
 
-![infoOS](./Screen/3.jpg)
-![infoPCI](./Screen/4.jpg) 
+![infoOS](./Screen/3.png)
+![infoPCI](./Screen/4.png) 
 
 ### What works and What doesn't or WIP:
 
