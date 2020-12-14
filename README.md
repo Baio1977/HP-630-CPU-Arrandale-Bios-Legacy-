@@ -29,6 +29,5 @@
 - [x] All USB Ports 
 - [x] Brightness Key
 - [x] Realtek RTL8111 LAN
-- [x] USB Cardreader
 - [x] ACPI Battery
 - [x] Windows boot from OpenCore
