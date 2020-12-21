@@ -1,0 +1,73 @@
+13:868  6:048  Found BIOS RSDP at %p
+13:868  0:000  Saving ACPI tables from RSDP %p to Âçí‚ÅÑÂëê‚Åí‰°èÂÖê‰ïè…çÓÇ¨Î≠ø$ ...
+13:868  0:000   %p: 'RSD PTR OHPQOEM¨‡ª$', Rev: -1154149545 (Acpi 2.0 or newer), Len: 36 -> RSDP.aml
+15:229  1:360    (Xsdt: %p, Rsdt: %p)
+15:229  0:000    %p: 'XSDTt', 'XSDT', Rev: -1154149753, Len: 1 -> XSDT.aml
+15:463  0:234    %p: 'RSDTL', 'RSDT', Rev: -1154149753, Len: 1 -> RSDT.aml
+15:713  0:249    Tables in Xsdt: 10
+15:713  0:000    0. %p: 'FACPÙ', 'FACP', Rev: -1154149753, Len: 4 -> FACP.aml
+15:947  0:234        (Dsdt: BB7EB000, Facs: BB76D000, XDsdt: bb7eb000, XFacs: bb76d000)
+15:947  0:000        %p: 'DSDT‡ÿ', 'DSDT', Rev: -1154149913, Len: 2 -> DSDT.aml
+16:230  0:283        %p: 'FACS@', Ver: -1154149717, Len: 1 -> FACS.aml
+16:466  0:235    1. %p: 'ASF!•', 'ASF!', Rev: -1154149753, Len: 32 -> ASF!.aml
+16:700  0:234    2. %p: 'HPET8', 'HPET', Rev: -1154149753, Len: 1 -> HPET.aml
+16:935  0:234    3. %p: 'APICå', 'APIC', Rev: -1154149753, Len: 2 -> APIC.aml
+17:168  0:233    4. %p: 'MCFG<', 'MCFG', Rev: -1154149753, Len: 1 -> MCFG.aml
+17:403  0:234    5. %p: 'SLICv', 'SLIC', Rev: -1154149753, Len: 1 -> SLIC.aml
+17:637  0:234    6. %p: 'BOOT(', 'BOOT', Rev: -1154149753, Len: 1 -> BOOT.aml
+17:873  0:235    7. %p: 'ASPT4', 'ASPT', Rev: -1154149753, Len: 4 -> ASPT.aml
+18:252  0:379    8. %p: 'WDAT$', 'WDAT', Rev: -1154149753, Len: 1 -> WDAT.aml
+18:510  0:257    9. %p: 'SSDTÒ	', 'SSDT', Rev: -1154149753, Len: 1 -> SSDT-0-CpuPm.aml (Found hidden SSDT 4 pcs)
+18:768  0:257        * 3144227352: 'SSDT', 'Cpu0Ist', Rev: 1, Len: 1140  53 53 44 54 74 04 00 00 01 DF 50 6D 52 65 66 00 Internal length = 1140 -> SSDT-x0_0-Cpu0Ist.aml
+19:025  0:257        * 3144223384: 'SSDT', 'ApIst', Rev: 1, Len: 771  53 53 44 54 03 03 00 00 01 76 50 6D 52 65 66 00 Internal length = 771 -> SSDT-x0_1-ApIst.aml
+19:283  0:257        * 3144216600: 'SSDT', 'Cpu0Cst', Rev: 1, Len: 2193  53 53 44 54 91 08 00 00 01 66 50 6D 52 65 66 00 Internal length = 2193 -> SSDT-x0_2-Cpu0Cst.aml
+19:662  0:379        * 3144215960: 'SSDT', 'ApCst', Rev: 1, Len: 281  53 53 44 54 19 01 00 00 01 EC 50 6D 52 65 66 00 Internal length = 281 -> SSDT-x0_3-ApCst.aml
+20:005  0:342  
+20:005  0:000    Tables in Rsdt: 10
+20:005  0:000    0. %p: 'FACPÙ', 'FACP', Rev: -1154149753, Len: 4
+20:005  0:000        (Dsdt: BB7EB000, Facs: BB76D000, XDsdt: bb7eb000, XFacs: bb76d000)
+20:005  0:000        %p: 'DSDT‡ÿ', 'DSDT', Rev: -1154149913, Len: 2
+20:006  0:001        %p: 'FACS@', Ver: -1154149717, Len: 1
+20:006  0:000    1. %p: 'ASF!•', 'ASF!', Rev: -1154149753, Len: 32
+20:006  0:000    2. %p: 'HPET8', 'HPET', Rev: -1154149753, Len: 1
+20:006  0:000    3. %p: 'APICå', 'APIC', Rev: -1154149753, Len: 2
+20:006  0:000    4. %p: 'MCFG<', 'MCFG', Rev: -1154149753, Len: 1
+20:006  0:000    5. %p: 'SLICv', 'SLIC', Rev: -1154149753, Len: 1
+20:006  0:000    6. %p: 'BOOT(', 'BOOT', Rev: -1154149753, Len: 1
+20:006  0:000    7. %p: 'ASPT4', 'ASPT', Rev: -1154149753, Len: 4
+20:006  0:000    8. %p: 'WDAT$', 'WDAT', Rev: -1154149753, Len: 1
+20:006  0:000    9. %p: 'SSDTÒ	', 'SSDT', Rev: -1154149753, Len: 1
+20:006  0:000  Found UEFI Acpi 2.0 RSDP at %p
+20:006  0:000  Printing ACPI tables from RSDP %p ...
+20:006  0:000   %p: 'RSD PTR OHPQOEM¨‡ª$', Rev: -1154149545 (Acpi 2.0 or newer), Len: 36
+20:006  0:000    (Xsdt: %p, Rsdt: %p)
+20:006  0:000    %p: 'XSDTt', 'XSDT', Rev: -1154149753, Len: 1
+20:006  0:000    %p: 'RSDTL', 'RSDT', Rev: -1154149753, Len: 1
+20:006  0:000    Tables in Xsdt: 10
+20:006  0:000    0. %p: 'FACPÙ', 'FACP', Rev: -1154149753, Len: 4
+20:006  0:000        (Dsdt: BB7EB000, Facs: BB76D000, XDsdt: bb7eb000, XFacs: bb76d000)
+20:006  0:000        %p: 'DSDT‡ÿ', 'DSDT', Rev: -1154149913, Len: 2
+20:007  0:001        %p: 'FACS@', Ver: -1154149717, Len: 1
+20:007  0:000    1. %p: 'ASF!•', 'ASF!', Rev: -1154149753, Len: 32
+20:007  0:000    2. %p: 'HPET8', 'HPET', Rev: -1154149753, Len: 1
+20:007  0:000    3. %p: 'APICå', 'APIC', Rev: -1154149753, Len: 2
+20:007  0:000    4. %p: 'MCFG<', 'MCFG', Rev: -1154149753, Len: 1
+20:007  0:000    5. %p: 'SLICv', 'SLIC', Rev: -1154149753, Len: 1
+20:007  0:000    6. %p: 'BOOT(', 'BOOT', Rev: -1154149753, Len: 1
+20:007  0:000    7. %p: 'ASPT4', 'ASPT', Rev: -1154149753, Len: 4
+20:007  0:000    8. %p: 'WDAT$', 'WDAT', Rev: -1154149753, Len: 1
+20:007  0:000    9. %p: 'SSDTÒ	', 'SSDT', Rev: -1154149753, Len: 1
+20:007  0:000    Tables in Rsdt: 10
+20:007  0:000    0. %p: 'FACPÙ', 'FACP', Rev: -1154149753, Len: 4
+20:007  0:000        (Dsdt: BB7EB000, Facs: BB76D000, XDsdt: bb7eb000, XFacs: bb76d000)
+20:007  0:000        %p: 'DSDT‡ÿ', 'DSDT', Rev: -1154149913, Len: 2
+20:008  0:001        %p: 'FACS@', Ver: -1154149717, Len: 1
+20:008  0:000    1. %p: 'ASF!•', 'ASF!', Rev: -1154149753, Len: 32
+20:008  0:000    2. %p: 'HPET8', 'HPET', Rev: -1154149753, Len: 1
+20:008  0:000    3. %p: 'APICå', 'APIC', Rev: -1154149753, Len: 2
+20:008  0:000    4. %p: 'MCFG<', 'MCFG', Rev: -1154149753, Len: 1
+20:008  0:000    5. %p: 'SLICv', 'SLIC', Rev: -1154149753, Len: 1
+20:008  0:000    6. %p: 'BOOT(', 'BOOT', Rev: -1154149753, Len: 1
+20:008  0:000    7. %p: 'ASPT4', 'ASPT', Rev: -1154149753, Len: 4
+20:008  0:000    8. %p: 'WDAT$', 'WDAT', Rev: -1154149753, Len: 1
+20:008  0:000    9. %p: 'SSDTÒ	', 'SSDT', Rev: -1154149753, Len: 1
