@@ -30,4 +30,3 @@
 - [x] Brightness Key
 - [x] Realtek RTL8111 LAN
 - [x] ACPI Battery
-- [x] Windows boot from OpenCore
