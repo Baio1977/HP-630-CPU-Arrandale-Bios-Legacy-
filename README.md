@@ -30,6 +30,6 @@
 - [x] Realtek RTL8111 LAN
 - [x] ACPI Battery
 
-### What works:
+### NO works:
 
 - [x] Brightness Key
