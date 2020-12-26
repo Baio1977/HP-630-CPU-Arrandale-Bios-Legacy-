@@ -27,6 +27,9 @@
 - [x] Intel HD iGPU
 - [x] ALC270 Internal Speakers
 - [x] All USB Ports 
-- [x] Brightness Key
 - [x] Realtek RTL8111 LAN
 - [x] ACPI Battery
+
+### What works:
+
+- [x] Brightness Key
