@@ -21,7 +21,7 @@
 | Ram              | 8Gb ddr3 1067 Mhz                  |
 | SSD              | Kingston A400 512gb                |
 | SmBios           | MacbookPro 6,1                     |
-| BootLoader       | OpenCore 0.6.4                     |
+| BootLoader       | OpenCore 0.6.8                     |
 
 ## Device
 
