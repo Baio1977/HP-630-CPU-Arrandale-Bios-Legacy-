@@ -20,13 +20,14 @@
 | Audio            | Realtek ALC270                     |
 | Ram              | 8Gb ddr3 1067 Mhz                  |
 | SSD              | Kingston A400 512gb                |
-| SmBios           | MacbookPro 6,1                     |
-| BootLoader       | OpenCore 0.6.8                     |
+| SmBios           | MacbookPro 6,2                     |
+| BootLoader       | OpenCore 0.7.2                     |
 
 ## Device
 
 ![infoOS](./Screen/3.png)
 ![infoPCI](./Screen/4.png) 
+![infoOS](./Screen/5.png)
 
 ### What works:
 
