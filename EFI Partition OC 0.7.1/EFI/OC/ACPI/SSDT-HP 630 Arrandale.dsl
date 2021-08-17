@@ -5,13 +5,13 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of iASLrcf8tY.aml, Tue Apr  6 12:55:33 2021
+ * Disassembly of iASLBaVgVX.aml, Sat Aug 14 21:19:14 2021
  *
  * Original Table Header:
  *     Signature        "SSDT"
- *     Length           0x000002DE (734)
+ *     Length           0x000002B6 (694)
  *     Revision         0x02
- *     Checksum         0x6B
+ *     Checksum         0xF1
  *     OEM ID           "HACK"
  *     OEM Table ID     "HackLife"
  *     OEM Revision     0x00000000 (0)
@@ -24,7 +24,6 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
     External (_SB_.PCI0, DeviceObj)
     External (_SB_.PCI0.GFX0, DeviceObj)
     External (_SB_.PCI0.LPCB, DeviceObj)
-    External (_SB_.PCI0.LPCB.H_EC, DeviceObj)
     External (_SB_.PCI0.LPCB.HPET, DeviceObj)
     External (_SB_.PCI0.SBUS, DeviceObj)
 
@@ -50,7 +49,7 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
                 {
                     Name (_HID, EisaId ("APP0002"))  // _HID: Hardware ID
                     Name (_CID, "backlight")  // _CID: Compatible ID
-                    Name (_UID, 0x99)  // _UID: Unique ID
+                    Name (_UID, 0x0B)  // _UID: Unique ID
                     Method (_STA, 0, NotSerialized)  // _STA: Status
                     {
                         If (_OSI ("Darwin"))
@@ -96,11 +95,6 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
                 Device (EC)
                 {
                     Name (_HID, "ACID0001")  // _HID: Hardware ID
-                    Name (_PRW, Package (0x02)  // _PRW: Power Resources for Wake
-                    {
-                        0x1B, 
-                        0x03
-                    })
                     Method (_STA, 0, NotSerialized)  // _STA: Status
                     {
                         If (_OSI ("Darwin"))
@@ -111,14 +105,6 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
                         {
                             Return (Zero)
                         }
-                    }
-                }
-
-                Scope (H_EC)
-                {
-                    If (_OSI ("Darwin"))
-                    {
-                        Name (OSYS, 0x07D6)
                     }
                 }
 
