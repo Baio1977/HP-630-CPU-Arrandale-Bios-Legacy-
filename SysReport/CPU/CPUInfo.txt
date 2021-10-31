@@ -1,0 +1,38 @@
+CPU BrandString: Intel(R) Core(TM) i3 CPU       M 380  @ 2.53GHz
+MicrocodeRevision: 0x00000002
+Virtualization 0
+CPUID 00020655 00100800 009AE3BD BFEBFBFF
+ExtSigEcx 00000001
+ExtSigEdx 28100800
+Type 0x00
+Family 0x06
+Model 0x25
+ExtModel 0x02
+ExtFamily 0x00
+Stepping 0x05
+Features 0x009AE3BDBFEBFBFF
+ExtFeatures 0x0000000128100800
+Signature 0x00020655
+Brand 0x00
+AppleProcessorType 0x0901
+CstConfigLock 0
+CpuGeneration 6
+MaxId 0x0000000B
+MaxExtId 0x80000008
+PackageCount 1
+CoreCount 2
+ThreadCount 4
+ExternalClock 133
+ARTFrequency 0
+CPUFrequency 2526978690
+CPUFrequencyFromTSC 2526978690
+CPUFrequencyFromART 0
+TscAdjust 0
+CPUFrequencyFromApple 0
+CPUFrequencyFromVMT 0
+FSBFrequency 132998878
+
+CPU00:
+MSR_PLATFORM_INFO: 0x70020011300
+MSR_TURBO_RATIO_LIMIT: 0x1313
+
