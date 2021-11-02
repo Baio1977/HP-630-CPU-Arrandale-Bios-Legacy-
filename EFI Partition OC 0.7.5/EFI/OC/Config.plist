@@ -308,15 +308,6 @@
                     <key>model</key>
                     <string>Core Processor DRAM Controller</string>
                 </dict>
-                <key>PciRoot(0x0)/Pci(0x16,0x0)</key>
-                <dict>
-                    <key>AAPL,slot-name</key>
-                    <string>Internal@0,22,0</string>
-                    <key>device_type</key>
-                    <string>Communication controller</string>
-                    <key>model</key>
-                    <string>5 Series/3400 Series Chipset IMEI Controller</string>
-                </dict>
                 <key>PciRoot(0x0)/Pci(0x1A,0x0)</key>
                 <dict>
                     <key>AAPL,slot-name</key>

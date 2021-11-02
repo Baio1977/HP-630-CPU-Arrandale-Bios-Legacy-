@@ -5,7 +5,7 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of iASLW7dB0l.aml, Sun Oct 31 17:49:11 2021
+ * Disassembly of iASLHiZDwB.aml, Tue Nov  2 20:28:44 2021
  *
  * Original Table Header:
  *     Signature        "SSDT"
@@ -58,27 +58,6 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
 
         Scope (PCI0)
         {
-            Scope (GFX0)
-            {
-                Device (PNLF)
-                {
-                    Name (_HID, EisaId ("APP0002"))  // _HID: Hardware ID
-                    Name (_CID, "backlight")  // _CID: Compatible ID
-                    Name (_UID, 0x0A)  // _UID: Unique ID
-                    Method (_STA, 0, NotSerialized)  // _STA: Status
-                    {
-                        If (_OSI ("Darwin"))
-                        {
-                            Return (0x0B)
-                        }
-                        Else
-                        {
-                            Return (Zero)
-                        }
-                    }
-                }
-            }
-
             Scope (EHC1)
             {
                 Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
@@ -168,6 +147,27 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
                         "AAPL,max-port-current-in-sleep", 
                         0x0834
                     })
+                }
+            }
+
+            Scope (GFX0)
+            {
+                Device (PNLF)
+                {
+                    Name (_HID, EisaId ("APP0002"))  // _HID: Hardware ID
+                    Name (_CID, "backlight")  // _CID: Compatible ID
+                    Name (_UID, 0x0A)  // _UID: Unique ID
+                    Method (_STA, 0, NotSerialized)  // _STA: Status
+                    {
+                        If (_OSI ("Darwin"))
+                        {
+                            Return (0x0B)
+                        }
+                        Else
+                        {
+                            Return (Zero)
+                        }
+                    }
                 }
             }
 
