@@ -11,6 +11,19 @@
 	<key>CFBundleIdentifier</key>
 	<string>com.apple.driver.toledaARPT</string>
 	<key>CFBundleInfoDictionaryVersion</key>
+	<str<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BuildMachineOSBuild</key>
+	<string>12D78</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleGetInfoString</key>
+	<string>Copyright © 2013 Apple All rights reserved.</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.apple.driver.toledaARPT</string>
+	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
 	<string>toledaARPT</string>
@@ -84,22 +97,4 @@
 	</dict>
 	<key>OSBundleLibraries</key>
 	<dict>
-		<key>com.apple.driver.IOPlatformPluginFamily</key>
-		<string>1.0.0</string>
-		<key>com.apple.iokit.IOGraphicsFamily</key>
-		<string>1.1</string>
-		<key>com.apple.iokit.IONDRVSupport</key>
-		<string>1.1</string>
-		<key>com.apple.iokit.IOPCIFamily</key>
-		<string>1.0</string>
-		<key>com.apple.kpi.iokit</key>
-		<string>8.3.1</string>
-		<key>com.apple.kpi.libkern</key>
-		<string>8.3.1</string>
-		<key>com.apple.kpi.mach</key>
-		<string>8.3.1</string>
-	</dict>
-	<key>OSBundleRequired</key>
-	<string>Local-Root</string>
-</dict>
-</plist>
+		<key>com.apple.driver.
