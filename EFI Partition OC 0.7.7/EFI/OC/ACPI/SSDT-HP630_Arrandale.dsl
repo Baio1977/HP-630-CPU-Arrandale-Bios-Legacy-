@@ -5,13 +5,13 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of iASLkXrCQa.aml, Tue Dec  7 19:23:01 2021
+ * Disassembly of iASLuAwJPB.aml, Mon Dec 27 16:50:33 2021
  *
  * Original Table Header:
  *     Signature        "SSDT"
- *     Length           0x000004B5 (1205)
+ *     Length           0x000005B8 (1464)
  *     Revision         0x02
- *     Checksum         0x9A
+ *     Checksum         0xDC
  *     OEM ID           "HACK"
  *     OEM Table ID     "HackLife"
  *     OEM Revision     0x00000000 (0)
@@ -26,6 +26,10 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
     External (_SB_.PCI0.EHC1, DeviceObj)
     External (_SB_.PCI0.EHC2, DeviceObj)
     External (_SB_.PCI0.GFX0, DeviceObj)
+    External (_SB_.PCI0.GFX0._DOS, MethodObj)    // 1 Arguments
+    External (_SB_.PCI0.GFX0.DD02._BCL, MethodObj)    // 0 Arguments
+    External (_SB_.PCI0.GFX0.DD02._BCM, MethodObj)    // 1 Arguments
+    External (_SB_.PCI0.GFX0.DD02._BQC, MethodObj)    // 0 Arguments
     External (_SB_.PCI0.LPCB, DeviceObj)
     External (_SB_.PCI0.LPCB.HPET, DeviceObj)
     External (_SB_.PCI0.SBUS, DeviceObj)
@@ -87,19 +91,19 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
                         "device_type", 
                         Buffer (0x05)
                         {
-                            "EHCI"
+                            "EHC1"
                         }, 
 
                         "AAPL,current-available", 
-                        0x0834, 
+                        0x05DC, 
                         "AAPL,current-extra", 
-                        0x0898, 
-                        "AAPL,current-extra-in-sleep", 
-                        0x0640, 
+                        0x03E8, 
+                        "AAPL,current-in-sleep", 
+                        0x05DC, 
                         "AAPL,device-internal", 
                         0x02, 
                         "AAPL,max-port-current-in-sleep", 
-                        0x0834
+                        0x03E8
                     })
                 }
             }
@@ -133,19 +137,19 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
                         "device_type", 
                         Buffer (0x05)
                         {
-                            "EHCI"
+                            "EHC2"
                         }, 
 
                         "AAPL,current-available", 
-                        0x0834, 
+                        0x05DC, 
                         "AAPL,current-extra", 
-                        0x0898, 
-                        "AAPL,current-extra-in-sleep", 
-                        0x0640, 
+                        0x03E8, 
+                        "AAPL,current-in-sleep", 
+                        0x05DC, 
                         "AAPL,device-internal", 
                         0x02, 
                         "AAPL,max-port-current-in-sleep", 
-                        0x0834
+                        0x03E8
                     })
                 }
             }
@@ -157,6 +161,55 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
                     Name (_HID, EisaId ("APP0002"))  // _HID: Hardware ID
                     Name (_CID, "backlight")  // _CID: Compatible ID
                     Name (_UID, 0x0A)  // _UID: Unique ID
+                    Method (_BCM, 1, NotSerialized)  // _BCM: Brightness Control Method
+                    {
+                        ^^DD02._BCM (Arg0)
+                    }
+
+                    Method (_BQC, 0, NotSerialized)  // _BQC: Brightness Query Current
+                    {
+                        Return (^^DD02._BQC ())
+                    }
+
+                    Method (_BCL, 0, NotSerialized)  // _BCL: Brightness Control Levels
+                    {
+                        Return (^^DD02._BCL ())
+                    }
+
+                    Method (_DOS, 1, NotSerialized)  // _DOS: Disable Output Switching
+                    {
+                        ^^_DOS (Arg0)
+                    }
+
+                    Method (XBCM, 1, NotSerialized)
+                    {
+                        ^^DD02._BCM (Arg0)
+                    }
+
+                    Method (XBQC, 0, NotSerialized)
+                    {
+                        Return (^^DD02._BQC ())
+                    }
+
+                    Name (XOPT, Zero)
+                    Method (XRGL, 0, NotSerialized)
+                    {
+                        Local0 = _BCL ()
+                        Local0 = DerefOf (Local0 [0x02])
+                        Return (Local0)
+                    }
+
+                    Method (XRGH, 0, NotSerialized)
+                    {
+                        Local0 = _BCL ()
+                        Local0 = DerefOf (Local0 [(SizeOf (Local0) - One)])
+                        Return (Local0)
+                    }
+
+                    Method (_INI, 0, NotSerialized)  // _INI: Initialize
+                    {
+                    }
+
                     Method (_STA, 0, NotSerialized)  // _STA: Status
                     {
                         If (_OSI ("Darwin"))
