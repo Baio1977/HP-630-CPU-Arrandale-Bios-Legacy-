@@ -1,60 +1,33 @@
 /*
  * Intel ACPI Component Architecture
- * AML/ASL+ Disassembler version 20210331 (64-bit version)
+ * AML/ASL+ Disassembler version 20210930 (64-bit version)
  * Copyright (c) 2000 - 2021 Intel Corporation
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of iASLjSPAXz.aml, Sun Oct 31 13:54:51 2021
+ * Disassembly of /Users/baio77/Documents/GitHub/HP-630-CPU-Arrandale-Bios-Legacy-/SysReport/ACPI/DSDT.aml, Sun Jan  7 14:28:06 2024
  *
  * Original Table Header:
  *     Signature        "DSDT"
- *     Length           0x0000D8E0 (55520)
+ *     Length           0x0000D8DF (55519)
  *     Revision         0x02
- *     Checksum         0x64
+ *     Checksum         0x30
  *     OEM ID           "HP    "
  *     OEM Table ID     "INSYDE  "
  *     OEM Revision     0x00000001 (1)
- *     Compiler ID      "MSFT"
- *     Compiler Version 0x01000013 (16777235)
+ *     Compiler ID      "INTL"
+ *     Compiler Version 0x20180427 (538444839)
  */
 DefinitionBlock ("", "DSDT", 2, "HP    ", "INSYDE  ", 0x00000001)
 {
-    /*
-     * iASL Warning: There were 7 external control methods found during
-     * disassembly, but only 0 were resolved (7 unresolved). Additional
-     * ACPI tables may be required to properly disassemble the code. This
-     * resulting disassembler output file may not compile because the
-     * disassembler did not know how many arguments to assign to the
-     * unresolved methods. Note: SSDTs can be dynamically loaded at
-     * runtime and may or may not be available via the host OS.
-     *
-     * To specify the tables needed to resolve external control method
-     * references, the -e option can be used to specify the filenames.
-     * Example iASL invocations:
-     *     iasl -e ssdt1.aml ssdt2.aml ssdt3.aml -d dsdt.aml
-     *     iasl -e dsdt.aml ssdt2.aml -d ssdt1.aml
-     *     iasl -e ssdt*.aml -d dsdt.aml
-     *
-     * In addition, the -fe option can be used to specify a file containing
-     * control method external declarations with the associated method
-     * argument counts. Each line of the file must be of the form:
-     *     External (<method pathname>, MethodObj, <argument count>)
-     * Invocation:
-     *     iasl -fe refs.txt -d dsdt.aml
-     *
-     * The following methods were unresolved and many not compile properly
-     * because the disassembler had to guess at the number of arguments
-     * required for each:
-     */
     External (_PR_.CPU0._PPC, UnknownObj)
-    External (_SB_.PCI0.IEIT.EITV, MethodObj)    // Warning: Unknown method, guessing 0 arguments
+    External (_SB_.PCI0.IEIT.EITV, MethodObj)    // 0 Arguments
     External (CFGD, UnknownObj)
-    External (ECST, MethodObj)    // Warning: Unknown method, guessing 1 arguments
-    External (HBRT, MethodObj)    // Warning: Unknown method, guessing 1 arguments
-    External (HDOS, MethodObj)    // Warning: Unknown method, guessing 0 arguments
-    External (HNOT, MethodObj)    // Warning: Unknown method, guessing 1 arguments
-    External (IDAB, MethodObj)    // Warning: Unknown method, guessing 0 arguments
+    External (ECST, MethodObj)    // 1 Arguments
+    External (HBRT, MethodObj)    // 1 Arguments
+    External (HDOS, MethodObj)    // 0 Arguments
+    External (HNOT, MethodObj)    // 1 Arguments
+    External (IDAB, MethodObj)    // 0 Arguments
     External (PDC0, UnknownObj)
     External (PDC1, UnknownObj)
     External (PDC2, UnknownObj)
@@ -63,7 +36,7 @@ DefinitionBlock ("", "DSDT", 2, "HP    ", "INSYDE  ", 0x00000001)
     External (PDC5, UnknownObj)
     External (PDC6, UnknownObj)
     External (PDC7, UnknownObj)
-    External (TNOT, MethodObj)    // Warning: Unknown method, guessing 0 arguments
+    External (TNOT, MethodObj)    // 0 Arguments
 
     Name (SP2O, 0x4E)
     Name (SP1O, 0x2E)
@@ -149,7 +122,7 @@ DefinitionBlock ("", "DSDT", 2, "HP    ", "INSYDE  ", 0x00000001)
     Name (PDBR, 0x4D)
     Name (SMBL, 0x10)
     Name (TCGM, One)
-    OperationRegion (GNVS, SystemMemory, 0xBB7BDE18, 0x00000175)
+    OperationRegion (GNVS, SystemMemory, 0xBB7BDE18, 0x0175)
     Field (GNVS, AnyAcc, Lock, Preserve)
     {
         OSYS,   16, 
@@ -325,7 +298,7 @@ DefinitionBlock ("", "DSDT", 2, "HP    ", "INSYDE  ", 0x00000001)
         PMEE,   8
     }
 
-    OperationRegion (OGNS, SystemMemory, 0xBB7BB018, 0x0000111E)
+    OperationRegion (OGNS, SystemMemory, 0xBB7BB018, 0x111E)
     Field (OGNS, AnyAcc, Lock, Preserve)
     {
         SERN,   80, 
@@ -466,7 +439,7 @@ DefinitionBlock ("", "DSDT", 2, "HP    ", "INSYDE  ", 0x00000001)
         BEH7,   8
     }
 
-    OperationRegion (H1DA, SystemMemory, 0xBB7BEF98, 0x0000001F)
+    OperationRegion (H1DA, SystemMemory, 0xBB7BEF98, 0x1F)
     Field (H1DA, AnyAcc, Lock, Preserve)
     {
         H1SG,   32, 
@@ -484,7 +457,7 @@ DefinitionBlock ("", "DSDT", 2, "HP    ", "INSYDE  ", 0x00000001)
         HSMS,   8
     }
 
-    OperationRegion (MBOX, SystemMemory, 0xBB7BDA98, 0x00000320)
+    OperationRegion (MBOX, SystemMemory, 0xBB7BDA98, 0x0320)
     Field (MBOX, AnyAcc, NoLock, Preserve)
     {
         PCI1,   8, 
@@ -3051,7 +3024,7 @@ DefinitionBlock ("", "DSDT", 2, "HP    ", "INSYDE  ", 0x00000001)
                         {
                             0xFFFFFFFF
                         })
-                        TMP1 [Zero] = (0x00010000 | DID1)
+                        TMP1 [Zero] = (0x00010000 | DID1) /* \DID1 */
                         Return (TMP1) /* \_SB_.PCI0.GFX0._DOD.TMP1 */
                     }
 
@@ -3062,8 +3035,8 @@ DefinitionBlock ("", "DSDT", 2, "HP    ", "INSYDE  ", 0x00000001)
                             0xFFFFFFFF, 
                             0xFFFFFFFF
                         })
-                        TMP2 [Zero] = (0x00010000 | DID1)
-                        TMP2 [One] = (0x00010000 | DID2)
+                        TMP2 [Zero] = (0x00010000 | DID1) /* \DID1 */
+                        TMP2 [One] = (0x00010000 | DID2) /* \DID2 */
                         Return (TMP2) /* \_SB_.PCI0.GFX0._DOD.TMP2 */
                     }
 
@@ -3075,9 +3048,9 @@ DefinitionBlock ("", "DSDT", 2, "HP    ", "INSYDE  ", 0x00000001)
                             0xFFFFFFFF, 
                             0xFFFFFFFF
                         })
-                        TMP3 [Zero] = (0x00010000 | DID1)
-                        TMP3 [One] = (0x00010000 | DID2)
-                        TMP3 [0x02] = (0x00010000 | DID3)
+                        TMP3 [Zero] = (0x00010000 | DID1) /* \DID1 */
+                        TMP3 [One] = (0x00010000 | DID2) /* \DID2 */
+                        TMP3 [0x02] = (0x00010000 | DID3) /* \DID3 */
                         Return (TMP3) /* \_SB_.PCI0.GFX0._DOD.TMP3 */
                     }
 
@@ -3090,10 +3063,10 @@ DefinitionBlock ("", "DSDT", 2, "HP    ", "INSYDE  ", 0x00000001)
                             0xFFFFFFFF, 
                             0xFFFFFFFF
                         })
-                        TMP4 [Zero] = (0x00010000 | DID1)
-                        TMP4 [One] = (0x00010000 | DID2)
-                        TMP4 [0x02] = (0x00010000 | DID3)
-                        TMP4 [0x03] = (0x00010000 | DID4)
+                        TMP4 [Zero] = (0x00010000 | DID1) /* \DID1 */
+                        TMP4 [One] = (0x00010000 | DID2) /* \DID2 */
+                        TMP4 [0x02] = (0x00010000 | DID3) /* \DID3 */
+                        TMP4 [0x03] = (0x00010000 | DID4) /* \DID4 */
                         Return (TMP4) /* \_SB_.PCI0.GFX0._DOD.TMP4 */
                     }
 
@@ -3107,11 +3080,11 @@ DefinitionBlock ("", "DSDT", 2, "HP    ", "INSYDE  ", 0x00000001)
                             0xFFFFFFFF, 
                             0xFFFFFFFF
                         })
-                        TMP5 [Zero] = (0x00010000 | DID1)
-                        TMP5 [One] = (0x00010000 | DID2)
-                        TMP5 [0x02] = (0x00010000 | DID3)
-                        TMP5 [0x03] = (0x00010000 | DID4)
-                        TMP5 [0x04] = (0x00010000 | DID5)
+                        TMP5 [Zero] = (0x00010000 | DID1) /* \DID1 */
+                        TMP5 [One] = (0x00010000 | DID2) /* \DID2 */
+                        TMP5 [0x02] = (0x00010000 | DID3) /* \DID3 */
+                        TMP5 [0x03] = (0x00010000 | DID4) /* \DID4 */
+                        TMP5 [0x04] = (0x00010000 | DID5) /* \DID5 */
                         Return (TMP5) /* \_SB_.PCI0.GFX0._DOD.TMP5 */
                     }
 
@@ -3126,12 +3099,12 @@ DefinitionBlock ("", "DSDT", 2, "HP    ", "INSYDE  ", 0x00000001)
                             0xFFFFFFFF, 
                             0xFFFFFFFF
                         })
-                        TMP6 [Zero] = (0x00010000 | DID1)
-                        TMP6 [One] = (0x00010000 | DID2)
-                        TMP6 [0x02] = (0x00010000 | DID3)
-                        TMP6 [0x03] = (0x00010000 | DID4)
-                        TMP6 [0x04] = (0x00010000 | DID5)
-                        TMP6 [0x05] = (0x00010000 | DID6)
+                        TMP6 [Zero] = (0x00010000 | DID1) /* \DID1 */
+                        TMP6 [One] = (0x00010000 | DID2) /* \DID2 */
+                        TMP6 [0x02] = (0x00010000 | DID3) /* \DID3 */
+                        TMP6 [0x03] = (0x00010000 | DID4) /* \DID4 */
+                        TMP6 [0x04] = (0x00010000 | DID5) /* \DID5 */
+                        TMP6 [0x05] = (0x00010000 | DID6) /* \DID6 */
                         Return (TMP6) /* \_SB_.PCI0.GFX0._DOD.TMP6 */
                     }
 
@@ -3147,13 +3120,13 @@ DefinitionBlock ("", "DSDT", 2, "HP    ", "INSYDE  ", 0x00000001)
                             0xFFFFFFFF, 
                             0xFFFFFFFF
                         })
-                        TMP7 [Zero] = (0x00010000 | DID1)
-                        TMP7 [One] = (0x00010000 | DID2)
-                        TMP7 [0x02] = (0x00010000 | DID3)
-                        TMP7 [0x03] = (0x00010000 | DID4)
-                        TMP7 [0x04] = (0x00010000 | DID5)
-                        TMP7 [0x05] = (0x00010000 | DID6)
-                        TMP7 [0x06] = (0x00010000 | DID7)
+                        TMP7 [Zero] = (0x00010000 | DID1) /* \DID1 */
+                        TMP7 [One] = (0x00010000 | DID2) /* \DID2 */
+                        TMP7 [0x02] = (0x00010000 | DID3) /* \DID3 */
+                        TMP7 [0x03] = (0x00010000 | DID4) /* \DID4 */
+                        TMP7 [0x04] = (0x00010000 | DID5) /* \DID5 */
+                        TMP7 [0x05] = (0x00010000 | DID6) /* \DID6 */
+                        TMP7 [0x06] = (0x00010000 | DID7) /* \DID7 */
                         Return (TMP7) /* \_SB_.PCI0.GFX0._DOD.TMP7 */
                     }
 
@@ -3170,14 +3143,14 @@ DefinitionBlock ("", "DSDT", 2, "HP    ", "INSYDE  ", 0x00000001)
                             0xFFFFFFFF, 
                             0xFFFFFFFF
                         })
-                        TMP8 [Zero] = (0x00010000 | DID1)
-                        TMP8 [One] = (0x00010000 | DID2)
-                        TMP8 [0x02] = (0x00010000 | DID3)
-                        TMP8 [0x03] = (0x00010000 | DID4)
-                        TMP8 [0x04] = (0x00010000 | DID5)
-                        TMP8 [0x05] = (0x00010000 | DID6)
-                        TMP8 [0x06] = (0x00010000 | DID7)
-                        TMP8 [0x07] = (0x00010000 | DID8)
+                        TMP8 [Zero] = (0x00010000 | DID1) /* \DID1 */
+                        TMP8 [One] = (0x00010000 | DID2) /* \DID2 */
+                        TMP8 [0x02] = (0x00010000 | DID3) /* \DID3 */
+                        TMP8 [0x03] = (0x00010000 | DID4) /* \DID4 */
+                        TMP8 [0x04] = (0x00010000 | DID5) /* \DID5 */
+                        TMP8 [0x05] = (0x00010000 | DID6) /* \DID6 */
+                        TMP8 [0x06] = (0x00010000 | DID7) /* \DID7 */
+                        TMP8 [0x07] = (0x00010000 | DID8) /* \DID8 */
                         Return (TMP8) /* \_SB_.PCI0.GFX0._DOD.TMP8 */
                     }
 
@@ -4017,7 +3990,7 @@ DefinitionBlock ("", "DSDT", 2, "HP    ", "INSYDE  ", 0x00000001)
                         {
                             PARM &= 0xEFFF0000
                             PARM &= (DerefOf (DBTB [IBTT]) << 0x10)
-                            PARM |= IBTT /* \_SB_.PCI0.GFX0.PARM */
+                            PARM |= IBTT /* \IBTT */
                             GESF = Zero
                             Return (SUCC) /* \_SB_.PCI0.GFX0.SUCC */
                         }
@@ -4050,7 +4023,7 @@ DefinitionBlock ("", "DSDT", 2, "HP    ", "INSYDE  ", 0x00000001)
                             PARM |= 0x1800
                             PARM |= (IDMS << 0x11)
                             PARM |= (DerefOf (DerefOf (CDCT [HVCO]) [CDVL]) << 
-                                0x15) /* \_SB_.PCI0.GFX0.PARM */
+                                0x15)
                             GESF = One
                             Return (SUCC) /* \_SB_.PCI0.GFX0.SUCC */
                         }
@@ -5687,7 +5660,9 @@ DefinitionBlock ("", "DSDT", 2, "HP    ", "INSYDE  ", 0x00000001)
                             PLD_CardCageNumber     = 0x0,
                             PLD_Reference          = 0x0,
                             PLD_Rotation           = 0x0,
-                            PLD_Order              = 0x0)
+                            PLD_Order              = 0x0,
+                            PLD_VerticalOffset     = 0x0,
+                            PLD_HorizontalOffset   = 0x0)
 )  // _PLD: Physical Location of Device
                         Device (PR11)
                         {
@@ -5826,7 +5801,9 @@ DefinitionBlock ("", "DSDT", 2, "HP    ", "INSYDE  ", 0x00000001)
                             PLD_CardCageNumber     = 0x0,
                             PLD_Reference          = 0x0,
                             PLD_Rotation           = 0x0,
-                            PLD_Order              = 0x0)
+                            PLD_Order              = 0x0,
+                            PLD_VerticalOffset     = 0x0,
+                            PLD_HorizontalOffset   = 0x0)
 )  // _PLD: Physical Location of Device
                         Device (PR12)
                         {
@@ -5917,7 +5894,9 @@ DefinitionBlock ("", "DSDT", 2, "HP    ", "INSYDE  ", 0x00000001)
                                 PLD_CardCageNumber     = 0x0,
                                 PLD_Reference          = 0x0,
                                 PLD_Rotation           = 0x0,
-                                PLD_Order              = 0x0)
+                                PLD_Order              = 0x0,
+                                PLD_VerticalOffset     = 0x0,
+                                PLD_HorizontalOffset   = 0x0)
 )  // _PLD: Physical Location of Device
                         }
 
@@ -6005,7 +5984,9 @@ DefinitionBlock ("", "DSDT", 2, "HP    ", "INSYDE  ", 0x00000001)
                                 PLD_CardCageNumber     = 0x0,
                                 PLD_Reference          = 0x0,
                                 PLD_Rotation           = 0x0,
-                                PLD_Order              = 0x0)
+                                PLD_Order              = 0x0,
+                                PLD_VerticalOffset     = 0x0,
+                                PLD_HorizontalOffset   = 0x0)
 )  // _PLD: Physical Location of Device
                         }
                     }
@@ -7225,8 +7206,7 @@ DefinitionBlock ("", "DSDT", 2, "HP    ", "INSYDE  ", 0x00000001)
                     Else
                     {
                         Local0 [Zero] = IAOR /* \IAOR */
-                        DerefOf (Local0 [0x02]) [Zero] = (CDAT & 0xFF
-                            )
+                        DerefOf (Local0 [0x02]) [Zero] = (CDAT & 0xFF)
                     }
 
                     Return (Local0)
@@ -7587,8 +7567,7 @@ DefinitionBlock ("", "DSDT", 2, "HP    ", "INSYDE  ", 0x00000001)
                             }
                         Local1 = Arg0
                         DerefOf (Local0 [0x02]) [Zero] = Local1
-                        DerefOf (Local0 [0x02]) [One] = (Local1 >> 0x08
-                            )
+                        DerefOf (Local0 [0x02]) [One] = (Local1 >> 0x08)
                     }
                     Else
                     {
@@ -7710,18 +7689,13 @@ DefinitionBlock ("", "DSDT", 2, "HP    ", "INSYDE  ", 0x00000001)
                             }
                         }
                     DerefOf (Local0 [0x02]) [Zero] = WSDY /* \WSDY */
-                    DerefOf (Local0 [0x02]) [One] = (WSDY >> 0x08
-                        )
-                    DerefOf (Local0 [0x02]) [0x02] = (WSDY >> 0x10
-                        )
-                    DerefOf (Local0 [0x02]) [0x03] = (WSDY >> 0x18
-                        )
+                    DerefOf (Local0 [0x02]) [One] = (WSDY >> 0x08)
+                    DerefOf (Local0 [0x02]) [0x02] = (WSDY >> 0x10)
+                    DerefOf (Local0 [0x02]) [0x03] = (WSDY >> 0x18)
                     DerefOf (Local0 [0x02]) [0x04] = WSDM /* \WSDM */
-                    DerefOf (Local0 [0x02]) [0x05] = (WSDM >> 0x08
-                        )
+                    DerefOf (Local0 [0x02]) [0x05] = (WSDM >> 0x08)
                     DerefOf (Local0 [0x02]) [0x06] = WSDD /* \WSDD */
-                    DerefOf (Local0 [0x02]) [0x07] = (WSDD >> 0x08
-                        )
+                    DerefOf (Local0 [0x02]) [0x07] = (WSDD >> 0x08)
                     Return (Local0)
                 }
 
@@ -8132,7 +8106,7 @@ DefinitionBlock ("", "DSDT", 2, "HP    ", "INSYDE  ", 0x00000001)
                             Local2 <<= 0x08
                             Local2 |= ^^PCI0.LPCB.H_EC.FSDL /* \_SB_.PCI0.LPCB.H_EC.FSDL */
                             Local2 *= 0x64
-                            Local2 = (Local2 / 0x12C0)
+                            Local2 /= 0x12C0
                             DerefOf (Local0 [0x02]) [Zero] = One
                             DerefOf (Local0 [0x02]) [One] = Local2
                         }
